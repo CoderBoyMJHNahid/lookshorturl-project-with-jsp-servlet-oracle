@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Home page - LookShortUrl</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- custom css -->
+    <link
+      href="assets/css/style.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- fontawesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body style="background: #f9f9f9">
+    <main>
+      <header>
+        <nav class="navbar navbar-expand-lg">
+          <div class="container">
+            <a
+              class="navbar-brand"
+              href="/"
+              ><img
+                class="logo-img"
+                src="assets/images/logo.png"
+                alt="Logo"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-end"
+              id="navbarSupportedContent"
+            >
+              <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    aria-current="page"
+                    href="/"
+                    >Logout</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <section class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="text-center my-4 text-color-own">
+              Welcome to LookShortUrl
+            </h1>
+          </div>
+          <div class="col-12">
+            <div class="content_wrapper">
+              <h2 class="fw-bold text-center">Paste the URL to be shortened</h2>
+              <form class="d-flex gap-3 mt-3">
+                <input
+                  type="text"
+                  name=""
+                  id="url_link"
+                  class="form-control"
+                  placeholder="Enter the link here"
+                />
+                <button
+                  type="submit"
+                  class="btn bg-own-color px-3 py-2"
+                >
+                  Shorten
+                </button>
+              </form>
+              <div class="url_table_wrapper mt-3">
+                <p class="fs-5 fw-bold text-color-own">Your short url list:</p>
+                <table class="table table-striped table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Created Url</th>
+                      <th scope="col">Target Url</th>
+                      <th scope="col">Total Visits</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    
+                    <tr>
+                      <td scope="row">1</td>
+                      <td>Created Url</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                      <td>
+                        <button
+                          class="btn btn-sm btn-success"
+                          data-bs-toggle="modal"
+                          data-bs-target="#editModal"
+                        >
+                          <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
+                        <button class="btn btn-sm btn-danger">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="editModal"
+        tabindex="-1"
+        aria-labelledby="editModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1
+                class="modal-title fs-5"
+                id="editModalLabel"
+              >
+                Edit your url
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form class="d-flex gap-3 my-3">
+                <input
+                  type="text"
+                  name=""
+                  id="url_link"
+                  class="form-control"
+                  placeholder="Enter the link here"
+                />
+                <button
+                  type="submit"
+                  class="btn bg-own-color px-3 py-2"
+                >
+                  Shorten
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
